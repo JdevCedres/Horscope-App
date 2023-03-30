@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.example.horoscopapp.R
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ListFragment : Fragment() {
+    private val viewModel by viewModels<ListViewModel> ()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
